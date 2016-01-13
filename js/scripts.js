@@ -23,7 +23,13 @@ $(function() {
       score += 1;
     }
 
-    alert(score);
+    if (score < -1) {
+      $('#lib').show();
+    }else if (score >= -1 && score <= 1) {
+      $('#mod').show();
+    }else {
+      $('#cons').show();
+    }
 
     event.preventDefault();
 
